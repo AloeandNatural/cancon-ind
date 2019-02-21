@@ -1,11 +1,11 @@
-# Portfolio
-My Portfolio Website
+# Can-Con Industries
+Can-Con Industries Website
 
 ## Built With
 * HTML5
 * CSS3
 * JQuery
-*Boostrap
+* Boostrap
 
 ## Author
 * Nicolas Leduc 
