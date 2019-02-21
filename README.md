@@ -1,5 +1,6 @@
 # Can-Con Industries
-Can-Con Industries Website
+Based in Edmonton Alberta, Can-Con manufactures polyethylene transition pieces & 
+risers for gas distribution systems.
 
 ## Built With
 * HTML5
