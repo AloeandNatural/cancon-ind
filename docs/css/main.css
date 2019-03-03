@@ -92,10 +92,6 @@ header .jumbotron-fluid .container .lead .btn:hover {
   color: #e4e4e4;
 }
 
-.navbar {
-    background: #fff;
-}
-
 .navbar .container {
   padding: 1.6rem 0;
   -webkit-box-align: center;
