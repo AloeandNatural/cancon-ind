@@ -1,10 +1,25 @@
 /********************************
     VARIABLES
 ********************************/
-/* COLORS */
+/******* COLORS ***********/
+:root {
+  --primary-color: #113f68;
+  --secondary-color: #5d91bf;
+  --black: #000;
+  --light-black: #1f1f1f;
+  --grey: #333;
+  --medium-grey: #999;
+  --light-grey: #ccc;
+  --white: #fff;
+  --darker-white: #e4e4e4;
+  --error-red: #ff5050;
+}
+/******* COLORS END ***********/
+
+
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #333;
+  color: var(--grey);
   position: relative;
 }
 
@@ -17,7 +32,7 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  border-bottom: 2px solid #113f68;
+  border-bottom: 2px solid var(--primary-color);
   width: 40px;
   margin: 10px auto;
 }
@@ -26,7 +41,7 @@ a,
 a:active,
 a:link,
 a:hover {
-  color: #bbb;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -36,14 +51,15 @@ p {
 }
 
 .btn {
-  background: #113f68;
-  border: 1px solid #113f68;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--white);
 }
 
 .btn:hover,
 .btn:hover a {
-  background: transparent;
-  color: #113f68;
+  background: var(--primary-color);
+  color: var(--white)fff;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -52,6 +68,7 @@ section {
   margin: 6rem 0;
 }
 
+/******* HEADER ***********/
 header .jumbotron-fluid {
   background: url(../img/blue.jpeg);
   background-position: center;
@@ -68,7 +85,7 @@ header .jumbotron-fluid {
 }
 
 header .jumbotron-fluid .container {
-  color: #e4e4e4;
+  color: var(--darker-white);
 }
 
 header .jumbotron-fluid .container h1 {
@@ -88,10 +105,11 @@ header .jumbotron-fluid .container .lead .btn {
 }
 
 header .jumbotron-fluid .container .lead .btn:hover {
-  border: 1px solid #113f68;
-  color: #e4e4e4;
+  border: 2px solid var(--primary-color);
+  color: var(--white);
 }
 
+/******* NAVIGATION ***********/
 .navbar .container {
   padding: 1.6rem 0;
   -webkit-box-align: center;
@@ -110,7 +128,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
 }
 
 .navbar .container .navbar-nav .nav-item .active {
-  color: #113f68;
+  color: var(--primary-color);
 }
 
 .navbar .container .navbar-nav .nav-item:last-of-type {
@@ -118,11 +136,11 @@ header .jumbotron-fluid .container .lead .btn:hover {
 }
 
 .navbar .container .navbar-nav .nav-item .nav-link:hover {
-  color: #113f68;
+  color: var(--primary-color);
 }
 
 .navbar .container .navbar-nav .nav-item__border {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--light-grey);
   margin-right: 2rem;
 }
 
@@ -143,7 +161,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
 @media screen and (max-width: 990px) {
   .navbar .container .navbar-nav .phone a {
     margin-right: 15px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--light-grey);
   }
 }
 
@@ -156,6 +174,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
   height: 2em;
 }
 
+/******* SERVICES ***********/
 .container .services-row {
   margin: 5rem 0;
 }
@@ -176,11 +195,12 @@ header .jumbotron-fluid .container .lead .btn:hover {
 }
 
 .col-md-4 i {
-  color: #113f68;
+  color: var(--primary-color);
   display: inline-block;
   width: 100%;
 }
 
+/******* SUPPLIERS ***********/
 .suppliers {
   margin-top: 8rem;
 }
@@ -196,7 +216,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.5rem;
-  color: #999;
+  color: var(--medium-grey);
 }
 
 .suppliers__title::before, .suppliers__title::after {
@@ -222,6 +242,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
   margin-right: 0;
 }
 
+/******* ABOUT ***********/
 .about {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/canconBuilding.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/canconBuilding.png);
@@ -242,7 +263,7 @@ header .jumbotron-fluid .container .lead .btn:hover {
 
 .about h2 {
   margin-bottom: 3rem;
-  color: #e4e4e4;
+  color: var(--darker-white);
 }
 
 .about p {
@@ -250,9 +271,13 @@ header .jumbotron-fluid .container .lead .btn:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/******* PRODUCTS ***********/
+.hidden {
+  opacity: 0;
+}
 .card {
-  -webkit-box-shadow: 0 1px 8px 2px #ccc;
-          box-shadow: 0 1px 8px 2px #ccc;
+  -webkit-box-shadow: 0 1px 8px 2px var(--light-grey);
+          box-shadow: 0 1px 8px 2px var(--light-grey);
   margin: 10px;
 }
 
@@ -262,23 +287,29 @@ header .jumbotron-fluid .container .lead .btn:hover {
 
 .card .card-body p {
   font-size: 1rem;
-  color: #999;
+  color: var(--medium-grey);
   margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .card .card-body .btn {
+  color: var(--grey);
   padding: 0.5rem 1rem;
 }
 
+.card .card-body .btn:hover {
+  border: 2px solid var(--primary-color);
+  color: var(--white);
+}
+
 .contact-nav {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--light-grey);
 }
 
 .holder {
   width: 100%;
   height: 650px;
-  background: #000;
+  background: var(--black);
 }
 
 .holder .container-fluid {
@@ -306,31 +337,40 @@ header .jumbotron-fluid .container .lead .btn:hover {
 .contact-form input[type=email]:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  -webkit-box-shadow: 0 0 5px #5d91bf;
-          box-shadow: 0 0 5px #5d91bf;
-  border: 1px solid #5d91bf;
+  -webkit-box-shadow: 0 0 5px var(--secondary-color);
+          box-shadow: 0 0 5px var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
 
 .contact-form .btn-send {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 10px 0;
+  color: var(--grey);
 }
 
 .contact-form .btn-send:hover {
-  border: 1px solid #113f68;
+  border: 2px solid var(--primary-color);
+  color: var(--white);
 }
 
 .contact-form .help-block.with-errors {
-  color: #ff5050;
+  color: var(--error-red);
   margin-top: 5px;
 }
 
 footer {
-  background: #113f68;
+  background: var(--primary-color);
   padding: 5rem 0;
   font-size: 0.9rem;
-  color: #bbb;
+  color: var(--light-grey);
+}
+
+footer a,
+a:active,
+a:link,
+a:hover {
+  color: var(--light-grey);
 }
 
 footer .footer-container {
@@ -357,13 +397,13 @@ footer .footer-container__text {
 }
 
 footer .footer-container__text a:hover {
-  color: #999;
+  color: var(--white);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .copyright {
-  background: #1f1f1f;
+  background: var(--light-black);
   margin: 0;
   padding: 0.5rem 0;
   position: absolute;
@@ -387,7 +427,7 @@ footer .footer-container__text a:hover {
 }
 
 .back-to-top i {
-  color: #5d91bf;
+  color: var(--secondary-color);
 }
 
 /*****************************
